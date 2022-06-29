@@ -75,7 +75,42 @@ console.log(fruit.slice(1, 7));
 console.log(fruit.replace("in", "ea"));
 console.log(fruit.indexOf("a"));
 console.log(fruit.charAt(3));
-console.log(fruit.split(" "))
+console.log(fruit.split(" ")) //split by characters
 
 let fruits = "Apple, banana, mango"
-console.log(fruits.split(","))
+console.log(fruits.split(",")) //split by a comma
+
+//Array
+
+let team = ["Mendy", "James", "Silva", "Rudiger", "Azpi"]
+for(let i = 0; i < team.length; i++){
+    console.log(team[i])
+}
+
+console.log(team.toString())
+console.log(team.join("-")) //joinned by any character
+
+//Array concatenation
+
+let teamA = ["Mendy", "James", "Silva", "Rudiger", "Azpi"];
+let teamB = ["Ramsdale", "Gabriel", "White", "Elneny"]
+let allTeam = teamA.concat(teamB);
+console.log(allTeam);
+console.log(allTeam.slice(1, 6))
+console.log(allTeam.reverse())
+
+// console.log(teamA + " " + teamB)
+
+//Sorting of numbers in Array
+console.log(allTeam.sort())  //sort in alphabetical order
+let data = [2, 23, 43, 45,25, 1, 65, 7, 1, 10, 2, 1, 16, 8, 4, 5, 89, 25, 8, 25]
+console.log(data.sort()) //put same figures together
+console.log(data.sort(function(a, b){ return a-b})) //sort in ascending order 
+console.log(data.sort(function(a, b){return b-a})) //sort in descending order
+
+let newArr = [];
+for(let i = 0; i < 10; i++){
+    newArr.push(i);
+    // newArr += i
+}
+console.log(newArr)
