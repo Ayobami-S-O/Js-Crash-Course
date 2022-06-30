@@ -105,7 +105,7 @@ console.log(allTeam.reverse())
 console.log(allTeam.sort())  //sort in alphabetical order
 let data = [2, 23, 43, 45,25, 1, 65, 7, 1, 10, 2, 1, 16, 8, 4, 5, 89, 25, 8, 25]
 console.log(data.sort()) //put same figures together
-console.log(data.sort(function(a, b){ return a-b})) //sort in ascending order 
+console.log(data.sort(function(a, b){return a-b})) //sort in ascending order 
 console.log(data.sort(function(a, b){return b-a})) //sort in descending order
 
 let newArr = [];
@@ -114,3 +114,48 @@ for(let i = 0; i < 10; i++){
     // newArr += i
 }
 console.log(newArr)
+
+//object
+
+let student = {
+    first: "Raf",
+    last : "Rang",
+    age: 120,
+    height : 100,
+
+    studentInfo : function(){
+        return "Age is = " + this.age + "\n" + "Height is = " + this.height
+    }
+}
+console.log(student.studentInfo())
+
+console.log(student["first"])
+console.log(student.last)
+
+
+//conditionals, controls
+
+let age = 105 // you can also write  "prompt("How old are you")";
+
+if(age >=18 && age <=35){
+    console.log("Target Audience")
+} else{
+    console.log("Not Target Audience")
+}
+
+//switch statement
+var day = prompt("Enter day of the week")
+switch (day){
+    case 0:
+       result = "Weekend";
+        break;
+        case 5:
+            result = "weekend";
+            break;
+            case 6:
+                result = "wekkend";
+                break;
+                default:
+                    result = "weekday";
+}
+console.log(result)
