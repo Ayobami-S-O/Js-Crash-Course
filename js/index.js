@@ -144,7 +144,7 @@ if(age >=18 && age <=35){
 }
 
 //switch statement
-var day = prompt("Enter day of the week")
+var day =  0 //prompt("Enter day of the week")
 switch (day){
     case 0:
        result = "Weekend";
@@ -153,9 +153,65 @@ switch (day){
             result = "weekend";
             break;
             case 6:
-                result = "wekkend";
+                result = "weekend";
                 break;
                 default:
                     result = "weekday";
 }
-console.log(result)
+console.log(`It's ${result}`)
+
+let weekDay = document.getElementById("week")
+
+weekDay.addEventListener("click", () => {
+    var day =  prompt("Enter day of the week")
+switch (day){
+    case 0:
+       weekDay.innerHTML = "Weekend";
+        break;
+        case 5:
+            weekDay.innerHTML = "weekend";
+            break;
+            case 6:
+                weekDay.innerHTML = "weekend";
+                break;
+                default:
+                    weekDay.innerHTML = "weekday";
+}
+})
+
+
+
+//This example finds the element with id="main", and then finds all <p> elements inside "main":
+const x = document.getElementById("main");
+const y = x.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = `Hello ${y[0].innerHTML}`
+
+
+//function to print score
+let myScore = document.getElementById("score")
+
+myScore.addEventListener("click", () => {
+  let grade =  prompt("Enter your score here")
+  if(grade === ""){
+    alert(" Please enter your score")
+  } else{
+    myScore.innerHTML = `My score is ${grade}`
+  }
+  
+})
+
+const myForm = document.getElementById("form1")
+
+  let text = " ";
+  for (i = 0; i < myForm.length; i++){
+    text += `${myForm.elements[i].value} <br>`
+    // text += myForm.elements[i].value + "<br>";
+  }
+
+  document.getElementById("form2").innerHTML = text;
+
+  document.getElementById("count").innerHTML = `Today's date is: ${Date()}`
+
+  let date = Date();
+  console.log(date)
